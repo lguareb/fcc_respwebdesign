@@ -1,0 +1,224 @@
+** start of undefined **
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="freeCodeCamp Accessibility Quiz practice project" />
+    <title>Midjourney Documentation</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  </head>
+  
+  <body>
+      <div id="header-div">
+        <img id="logo" src="https://cdn.document360.io/3040c2b6-fead-4744-a3a9-d56d621c6c7e/Images/Documentation/MJ_Favicon.png">
+        <h1>Midjourney Documentation</h1>
+        <span></span>
+      </div>
+      
+      
+      <nav id="navbar">
+        <ul>
+          <header>Midjourney User Guide</header>
+          <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+          <li><a class="nav-link" href="#Version">Version</a></li>
+          <li><a class="nav-link" href="#Upscalers">Upscalers</a></li>
+          <li><a class="nav-link" href="#Commands">Commands</a></li>
+          <li><a class="nav-link" href="#Parameters">Parameters</a></li>
+          <li><a class="nav-link" href="#Reference">Reference</a></li>
+        </ul>
+      </nav>
+   
+
+   <main id="main-doc">
+     <div id="main-div">
+      <section class="main-section" id="Introduction">
+        <header>Introduction</header>
+        <p>Learn how to use the Midjourney Bot on Discord to create custom images from simple text prompts.
+        </p>
+        <ol>
+          <li>Join the Discord</li>
+          <p>Go to <a href="https://discord.gg/midjourney">Midjourney.com</a>, select Join the Beta, or go directly to the Midjourney Discord.</p>
+          <li>Find a <em>Newbies</em> Channel</li>
+          <p>On the Midjourney Official Server, select any <code>newbies-#</code> channel visible in the left sidebar. You can also generate images with the Midjourney Bot on any other server that has invited the Bot. Look for instructions on your server on where to use the Bot.</p>
+          <li>Use the <code>/imagine</code> Command</li>
+          <p>Interact with the Midjourney Bot on Discord using a Command. Commands are used to create images, change default settings, monitor user info, and perform other helpful tasks. The <code>/imagine</code> command generates a unique image from a short text description (known as a Prompt).</p>
+          <li>Processes the Job</li>
+          <p>The Midjourney Bot takes about a minute to generate four options. A Job is any action that uses the Midjourney Bot. Jobs include using the /imagine command to create a grid of images, upscaling images, or creating image variations, all use your free trial time.</p>
+          <li>Upscale or Create Variations</li>
+          <p>After the initial image grid has finished generating, two rows of buttons appear: 
+            <ul>
+              <li>U buttons upscale an image generating a larger version of the selected image and adding more details.</li>
+              <li>V buttons create slight variations of the selected grid image. Creating a variation generates a new image grid similar to the chosen image's overall style and composition</li>
+            </ul>
+          </p>
+          <li>Rate Images</li>
+          <p>After using upscaling an image a new set of options will appear: <em>Make Variations</em>, <em>Beta/Light Upscale Redo</em>, <em>Web</em> (opens the image in your gallery on Midjourney.com)</p>
+          <li>Save Your Image</li>
+        </ol>
+      </section>
+
+      <section class="main-section" id="Version">
+        <header>Version</header>
+        <p>Midjourney routinely releases new model versions to improve efficiency, coherency, and quality. The latest model is the default, but other models can be used using the <code>--version</code> or <code>--v</code> parameter or by using the <code>/settings</code> command and selecting a model version. Different models excel at different types of images.</p>
+        <ul>
+          <li><code>--version</code> accepts the values 1, 2, 3, 4, and 5.</li>
+          <li><code>--version</code> can be abbreviated <code>--v</code></li>
+        </ul>
+      </section>
+
+      <section class="main-section" id="Upscalers">
+        <header>Upscalers</header>
+        <p>Midjourney starts by generating a grid of low-resolution image options for each Job. You can use a Midjourney upscaler on any grid image to increase the size and add additional details. There are multiple upscale models available for upscaling an image.</p>
+        <p>The <code>U1</code> <code>U2</code> <code>U3</code> <code>U4</code> buttons under each image grid are used to upscale the selected image.</p>
+        <p><em>All sizes are for square 1:1 aspect ratios.</em></p>
+        <ul>
+          <li>The <strong>Regular (Default) Upscaler</strong> increases image size while smoothing or refining details. Some small elements may change between the initial grid image and the finished upscale.</li>
+          <li>The <strong>Light Upscaler</strong> creates a 1024px x 1024px image and adds a moderate amount of details and textures. The Light Uspscaler is useful for faces and smooth surfaces when using older Midjourney Model Versions. Use the <code>--uplight</code> parameter to change the behavior of the <code>U1</code> <code>U2</code> <code>U3</code> <code>U4</code> upscale buttons to use the Light Upscaler.</li>
+          <li>The <strong>Detail Upscaler</strong>, creates a 1024px x 1024px image and adds many additional fine details to the image.
+
+Images that have been upscaled with the detailed upscaler can be upscaled again using the <code>Upscale to Max</code> button for a final resolution of 1664px x 1664px.</li>
+          <li>The <strong>Beta Upscaler</strong> creates a 2048px x 2048px image without adding many additional details. The Beta Uspcaler is useful for faces and smooth surfaces.Use the <code>--upbeta</code> parameter to change the behavior of the <code>U1</code> <code>U2</code> <code>U3</code> <code>U4</code> upscale buttons to use the Beta Upscaler.</li>
+        </ul>
+      </section>
+
+      <section class="main-section" id="Commands">
+        <header>Commands</header>
+        <p>You can interact with the Midjourney Bot on Discord by typing a Command. Commands are used to create images, change default settings, monitor user info, and perform other helpful tasks.</p>
+        <ul>
+          <li><code>/ask</code>: Get an answer to a question.</li>
+          <li><code>/blend</code>: Easily blend two images together.</li>
+          <li><code>/daily_theme</code>: Toggle notification pings for the #daily-theme channel update</li>
+          <li><code>/docs</code>: Use in the official Midjourney Discord server to quickly generate a link to topics covered in this user guide!</li>
+          <li><code>/faq</code>: Use in the official Midjourney Discord server to quickly generate a link to popual prompt craft channel FAQs.</li>
+          <li><code>/fast</code>: Switch to Fast mode.</li>
+          <li><code>/help</code>: Shows helpful basic information and tips about the Midjourney Bot.</li>
+          <li><code>/imagine</code>: Generate an image using a prompt</li>
+          <li><code>/info</code>: View information about your account and any queued or running jobs.</li>
+          <li><code>/stealth</code>: For Pro Plan Subscribers: switch to Stealth Mode</li>
+          <li><code>/public</code>: For Pro Plan Subscribers: switch to Public Mode</li>
+          <li><code>/subscribe</code>: Generate a personal link for a user's account page.</li>
+          <li><code>/settings</code>: View and adjust the Midjourney Bot's settings</li>
+        </ul>
+      </section>
+
+      <section class="main-section" id="Parameters">
+        <header>Parameters</header>
+        <p>Parameters are options added to a prompt that change how an image generates. Parameters can change an image's Aspect Ratios, switch between Midjourney Model Versions, change which Upscaler is used, and lots more. Parameters are always added to the end of a prompt. You can add multiple parameters to each prompt.</p>
+        <p>Basic Parameters</p>
+        <ul>
+          <li><strong>Aspect Ratios</strong>: <code>--aspect</code>, or <code>--ar</code> Change the aspect ratio of a generation.</li>
+          <li><strong>No</strong>: <code>--no</code> Negative prompting, <code>--no plants</code> would try to remove plants from the image.</li>
+          <li><strong>Stop</strong>: <code>--stop &lt;integer between 10–100></code> Use the <code>--stop</code> parameter to finish a Job partway through the process. Stopping a Job at an earlier percentage can create blurrier, less detailed results.</li>
+          <li><strong>Uplight</strong>: <code>--uplight</code> Use an alternative "light" upscaler when selecting the U buttons. The results are closer to the original grid image. The upscaled image is less detailed and smoother.</li>
+          <li><strong>Stylize</strong>: <code>--stylize &lt;number></code>, or <code>--s &lt;number></code> parameter influences how strongly Midjourney's default aesthetic style is applied to Jobs.</li>
+          <li><strong>Chaos</strong>: <code>--chaos &lt;number 0–100></code> Change how varied the results will be. Higher values produce more unusual and unexpected generations.</li>
+        </ul>
+      </section>
+
+      <section class="main-section" id="Reference">
+        <header>Reference</header>
+        <p>
+          <ul>
+            <li> All the documentation in this page is taken from <a href="https://docs.midjourney.com">Midjourney documentation website</a>.</li>
+          </ul>
+        </p>
+      </section>
+      </div>
+    </main>
+   
+  </body>
+</html>
+
+** end of undefined **
+
+** start of undefined **
+
+@media (prefers-reduced-motion: no-preference) {
+  * {
+    scroll-behavior: smooth;
+  }
+}
+
+/* ----- GENERAL ----- */
+
+body {
+    font-family: Tahoma, Verdana, sans-serif;
+    color: #222222;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 1.625em;
+}
+
+
+#logo {
+  width: max(100px, 1vh);
+  padding: 0.4rem;
+}
+
+#header-div {
+  width: 100%;
+  height: 20vh;
+  background-color: #79a3d9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+
+h1 {
+  color: #f5f6f7;
+  font-size: min(5vw, 1.2em);
+  text-align: center;
+}
+
+#navbar {
+  position: fixed;
+  min-width: 290px;
+  top: 25vh;
+  left: 0px;
+  width: 300px;
+  height: 100%;
+  border-right: solid;
+  border-color: rgba(0, 22, 22, 0.4);
+}
+
+
+#main-div {
+  padding-top: 15vw;
+
+}
+
+#main-doc {
+  position: absolute;
+  
+  margin-left: 310px;
+  padding: 20px;
+  margin-bottom: 110px;
+}
+
+
+/* ----- STYLE ----- */
+
+code {
+  text-align: left;
+  white-space: pre-line;
+  position: relative;
+  word-break: normal;
+  word-wrap: normal;
+  background-color: #f7f7f7;
+  border-radius: 5px;
+}
+
+header {
+  font-size: 20px;
+  
+}
+
+
+** end of undefined **
+
